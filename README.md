@@ -31,11 +31,6 @@ Tools and Technologies
 - BPMN 2.0 – business process notation
 - Camunda Tasklist – user-task handling
 - draw.io – ER data modeling
-Project Files
-File	Description
-[Obraditi reklamaciju.zip](Obraditi reklamaciju.zip)	BPMN process model and accompanying forms
-[Obraditi reklamaciju Mihalinac, Mihalic, Nizek.pdf](Obraditi reklamaciju Mihalinac%2C Mihalic%2C Nizek.pdf)	Complete project documentation, including diagrams, forms, business rules, and execution examples
-
 
 Viewing and Running the Prototype
 1. Download and extract Obraditi reklamaciju.zip.
