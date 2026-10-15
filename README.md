@@ -1,43 +1,48 @@
-Customer Complaint Management – Camunda 7
-A process-oriented application prototype developed as a university team project for the Process-Service Architectures course at the Faculty of Organization and Informatics (FOI), University of Zagreb.
-The project demonstrates how customer complaints can be modeled and processed using BPMN 2.0 and Camunda 7, with task forms, process variables, decision gateways, and execution in a Camunda development environment.
+# Customer Complaint Management | Camunda 7
+A process-oriented application prototype for handling customer complaints, developed as a team project for the Process-Service Architectures course at the Faculty of Organization and Informatics (FOI), University of Zagreb.
+The project demonstrates BPMN 2.0 process modeling, user-task forms, business rules, and workflow execution in Camunda 7.
 Project Overview
-The process begins when a customer submits a complaint related to an order or an individual product. A key account manager reviews and analyzes the complaint, makes a decision, and—if it is approved—proposes a resolution. The customer can then accept or reject the proposed resolution.
-Main Process Steps
-1. Submit and receive a complaint.
-2. Analyze the complaint.
-3. Approve, reject, or request additional information.
-4. If additional information is needed, return the complaint to the customer for revision.
-5. If approved, choose a resolution: product replacement, refund, or repair.
-6. Let the customer accept or reject the proposed resolution.
-7. If the customer accepts the proposed resolution, implement it and notify the customer; otherwise, the process ends without implementation.
-8. If the complaint itself is rejected during review, issue a rejection notice and end the process.
+The process starts when a customer submits a complaint about an order or an individual product. A key account manager reviews and analyzes the request, decides whether to approve, reject, or return it for revision, and proposes a resolution if the complaint is approved.
+The customer then decides whether to accept the proposed resolution. Accepted resolutions are implemented and the customer is informed of the outcome.
+Process Flow
+1. Submit complaint – the customer provides the order number and describes the problem.
+2. Receive and analyze – the key account manager records and evaluates the complaint.
+3. Decide on the complaint – approve, reject, or request a revision.
+4. Handle the decision:
+   - Revision: the customer updates the complaint and it returns for review.
+   - Rejection: a rejection notice is issued and the process ends.
+   - Approval: a resolution is proposed: product replacement, refund, or repair.
+5. Customer decision – the customer accepts or rejects the proposed resolution.
+6. Complete the process – if accepted, the resolution is carried out and the customer is notified; otherwise, the process ends without implementation.
 Process Roles
-- Customer – submits or revises a complaint and decides whether to accept the proposed resolution.
-- Key Account Manager – receives and analyzes complaints, makes decisions, selects and implements resolutions, and notifies the customer.
-Features and Business Rules
-- BPMN 2.0 workflow with 10 activities and 2 decision gateways, as described in the project documentation.
-- Forms for entering and reviewing complaint information during process execution.
-- Decision-based routing for approved, rejected, or returned complaints.
-- Each complaint is associated with one order and may concern an individual product or the entire order.
-- A proposed resolution proceeds to implementation only if accepted by the customer.
-- A supporting entity–relationship (ER) model documents the information required for complaint processing.
+- Customer: submits and revises complaints; accepts or rejects proposed resolutions.
+- Key Account Manager: receives, analyzes, and decides on complaints; proposes and carries out resolutions; informs the customer.
+Key Features
+- BPMN 2.0 model with 10 activities and 2 decision gateways.
+- Camunda forms connected to user tasks.
+- Conditional workflow paths for approval, rejection, and revision.
+- Complaint linked to one order, concerning an individual product or the entire order.
+- Customer approval required before implementing the proposed resolution.
+- Supporting entity–relationship (ER) data model and documented business logic.
+- Prototype execution demonstrated through Camunda task forms.
 Tools and Technologies
-- Camunda 7 – workflow execution and user tasks
-- Camunda Modeler / Form Builder – BPMN process and form design
-- BPMN 2.0 – business process modeling notation
-- Camunda Tasklist – execution and completion of user tasks
-- draw.io – ER data model diagram
-Repository Contents
-- [`camunda7-project.zip`](camunda7-project.zip) – BPMN model and associated form files
-- [`documentation.pdf`](documentation.pdf) – complete report, including the process model, ER diagram, forms, business rules, and execution examples
-How to Explore the Project
-1. Download and extract camunda7-project.zip.
-2. Open the included BPMN model with a Camunda 7-compatible Modeler.
-3. Review the BPMN diagram, task configurations, and associated forms.
-4. To execute the prototype, use a configured Camunda 7 environment and deploy the model together with its required form resources.
-5. Follow the process through Camunda Tasklist. The documentation provides examples of different decision paths.
-Note: This is an academic prototype, not a standalone production application. The repository contains the process and form artifacts; running them requires a suitable Camunda 7 environment.
+- Camunda 7 – workflow modeling and execution
+- Camunda Modeler and Form Builder – process and form design
+- BPMN 2.0 – business process notation
+- Camunda Tasklist – user-task handling
+- draw.io – ER data modeling
+Project Files
+File	Description
+[Obraditi reklamaciju.zip](Obraditi reklamaciju.zip)	BPMN process model and accompanying forms
+[Obraditi reklamaciju Mihalinac, Mihalic, Nizek.pdf](Obraditi reklamaciju Mihalinac%2C Mihalic%2C Nizek.pdf)	Complete project documentation, including diagrams, forms, business rules, and execution examples
+
+
+Viewing and Running the Prototype
+1. Download and extract Obraditi reklamaciju.zip.
+2. Open the BPMN file in a Camunda 7-compatible modeler and inspect the associated forms.
+3. Read the PDF for the process description, ER model, and examples of different execution paths.
+4. To run the workflow, deploy the required process and form resources to a configured Camunda 7 environment and complete user tasks through Tasklist.
+Note: This is an academic prototype, not a production-ready application. It requires a separately configured Camunda 7 environment for execution.
 
 Project Team
 - Ivan Nizek
